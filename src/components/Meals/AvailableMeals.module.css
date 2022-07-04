@@ -16,6 +16,16 @@
   color: white;
   font-weight: bold;
   font-size: 1.8rem;
+  animation: messages 1.9s ease infinite;
+}
+
+.meals-error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: messages 1.9s ease infinite;
+  -webkit-text-stroke: 1px rgb(172, 172, 172);
 }
 
 @keyframes meals-appear {
@@ -27,5 +37,20 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes messages {
+  0%,
+  100% {
+    letter-spacing: 0px;
+    opacity: 1;
+    font-size: 1.8rem;
+  }
+
+  50% {
+    letter-spacing: 3px;
+    opacity: 0.65;
+    font-size: 2rem;
   }
 }
