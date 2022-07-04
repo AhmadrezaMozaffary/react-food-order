@@ -13,7 +13,7 @@ const MealItemForm = (props) => {
     defaultValue: "1",
   };
 
-  const [amountIsValid, setAmountIsValid] = useState();
+  const [amountIsValid, setAmountIsValid] = useState(true);
 
   const amountInputRef = useRef();
 
@@ -28,6 +28,7 @@ const MealItemForm = (props) => {
     }
 
     props.onAddToCart(enteredAmountNum);
+    setAmountIsValid(true);
   };
 
   return (
